@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Jamuna Foundation</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://i.im.ge/2025/10/11/nxIcfm.ChatGPT-Image-Oct-11-2025-07-20-41-PM-removebg-preview.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Add padding to the top to account for the fixed navbar */
+            padding-top: 5rem;
+        }
+
+        .text-green-600 {
+            color: #22c55e;
+        }
+
+        .bg-green-600 {
+            background-color: #22c55e;
+        }
+
+        .hover\:bg-green-700:hover {
+            background-color: #16a34a;
+        }
+        .ring-green-500:focus {
+            --tw-ring-color: #22c55e;
+        }
+        .border-green-500:focus {
+           --tw-border-opacity: 1;
+            border-color: #22c55e;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Ribbon Banner -->
+    <div class="bg-red-600 text-white text-center py-2 px-4 text-sm font-semibold fixed top-0 w-full z-50">
+        <p>Note: This page is for demonstration purposes only. Payments are not processed.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg fixed top-0 w-full z-40 mt-8" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Left Side: Logo and Name -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <!-- Logo Image -->
+                        <img src="https://i.im.ge/2025/10/11/nxIcfm.ChatGPT-Image-Oct-11-2025-07-20-41-PM-removebg-preview.png"
+                            alt="Jamuna Foundation Logo" class="h-14 w-14">
+
+                        <span class="text-2xl font-bold text-gray-800">Jamuna Foundation</span>
+                    </a>
+                </div>
+
+                <!-- Center: Navigation Links (Desktop) -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 hover:border-b-4 border-green-600 rounded-xl text-md font-medium transition duration-150 ease-in-out">Home</a>
+                    <a href="index.html#mission"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 hover:border-b-4 border-green-600 rounded-xl text-md font-medium transition duration-150 ease-in-out">About</a>
+                    <a href="index.html#campaigns"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 hover:border-b-4 border-green-600 rounded-xl text-md font-medium transition duration-150 ease-in-out">Campaigns</a>
+                    <a href="index.html#gallery"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 hover:border-b-4 border-green-600 rounded-xl text-md font-medium transition duration-150 ease-in-out">Gallery</a>
+                </div>
+
+                <!-- Right Side: Login and Donation (Desktop) -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="login_page.html"
+                        class="text-gray-600 hover:text-green-700 font-medium px-4 py-2 rounded-lg transition duration-150 ease-in-out">Login</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="open = !open" type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-green-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg x-show="!open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg x-show="open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="open" @click.away="open = false" class="md:hidden bg-white shadow-xl" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-600 hover:bg-gray-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="index.html#mission" @click="open = false"
+                    class="text-gray-600 hover:bg-gray-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.html#campaigns" @click="open = false"
+                    class="text-gray-600 hover:bg-gray-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">Campaigns</a>
+                <a href="index.html#gallery" @click="open = false"
+                    class="text-gray-600 hover:bg-gray-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+                 <a href="login_page.html"
+                    class="text-gray-600 hover:bg-gray-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Donation Section -->
+    <main class="pt-20">
+        <section class="py-12 md:py-20 bg-gray-100">
+            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+                    <div class="text-center">
+                         <h2 class="text-4xl font-extrabold text-gray-900">Support Our Cause</h2>
+                        <p class="mt-3 text-lg text-gray-600">Your contribution makes a world of difference.</p>
+                    </div>
+
+                    <form class="mt-10 space-y-8">
+                        <!-- Donation Amount -->
+                        <div>
+                            <label class="text-lg font-bold text-gray-800">Choose an Amount (INR)</label>
+                            <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <label class="cursor-pointer border border-gray-300 rounded-xl p-4 text-center hover:border-green-500 has-[:checked]:bg-green-50 has-[:checked]:border-green-600 has-[:checked]:ring-2 has-[:checked]:ring-green-500 transition-all duration-200">
+                                    <input type="radio" name="amount" value="500" class="sr-only">
+                                    <span class="text-xl font-bold text-gray-800">₹500</span>
+                                </label>
+                                 <label class="cursor-pointer border border-gray-300 rounded-xl p-4 text-center hover:border-green-500 has-[:checked]:bg-green-50 has-[:checked]:border-green-600 has-[:checked]:ring-2 has-[:checked]:ring-green-500 transition-all duration-200">
+                                    <input type="radio" name="amount" value="1000" class="sr-only" checked>
+                                    <span class="text-xl font-bold text-gray-800">₹1000</span>
+                                </label>
+                                 <label class="cursor-pointer border border-gray-300 rounded-xl p-4 text-center hover:border-green-500 has-[:checked]:bg-green-50 has-[:checked]:border-green-600 has-[:checked]:ring-2 has-[:checked]:ring-green-500 transition-all duration-200">
+                                    <input type="radio" name="amount" value="2500" class="sr-only">
+                                    <span class="text-xl font-bold text-gray-800">₹2500</span>
+                                </label>
+                                 <label class="cursor-pointer border border-gray-300 rounded-xl p-4 text-center hover:border-green-500 has-[:checked]:bg-green-50 has-[:checked]:border-green-600 has-[:checked]:ring-2 has-[:checked]:ring-green-500 transition-all duration-200">
+                                    <input type="radio" name="amount" value="5000" class="sr-only">
+                                    <span class="text-xl font-bold text-gray-800">₹5000</span>
+                                </label>
+                            </div>
+                             <div class="mt-4">
+                                <input type="number" name="custom_amount" id="custom_amount" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-green-500 focus:border-green-500" placeholder="Or enter a custom amount">
+                            </div>
+                        </div>
+
+                        <!-- Personal Information -->
+                        <div class="space-y-6">
+                            <div>
+                                <label for="full-name" class="text-lg font-bold text-gray-800">Personal Information</label>
+                                <input type="text" name="full-name" id="full-name" autocomplete="name" required class="mt-3 w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-green-500 focus:border-green-500" placeholder="Full Name">
+                            </div>
+                             <div>
+                                <input type="email" name="email" id="email" autocomplete="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-green-500 focus:border-green-500" placeholder="Email Address">
+                            </div>
+                        </div>
+
+                         <!-- Payment Details -->
+                        <div>
+                             <label for="card-number" class="text-lg font-bold text-gray-800">Payment Details</label>
+                            <div class="mt-3 relative rounded-xl shadow-sm">
+                                <input type="text" id="card-number" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-green-500 focus:border-green-500" placeholder="Card Number">
+                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                    <i data-lucide="credit-card" class="h-5 w-5 text-gray-400"></i>
+                                </div>
+                            </div>
+                             <div class="mt-4 grid grid-cols-2 gap-4">
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-green-500 focus:border-green-500" placeholder="MM / YY">
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-green-500 focus:border-green-500" placeholder="CVC">
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div>
+                            <button type="submit"
+                                class="w-full flex justify-center py-4 px-4 border border-transparent rounded-xl shadow-lg text-lg font-bold text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-300 transform hover:scale-105">
+                                Donate Now
+                            </button>
+                        </div>
+                         <p class="text-xs text-gray-500 text-center flex items-center justify-center">
+                            <i data-lucide="lock" class="w-3 h-3 mr-1.5"></i> Secure SSL Encrypted Payment
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm text-gray-500">
+                &copy; <span x-text="new Date().getFullYear()"></span> Jamuna Foundation. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
+
