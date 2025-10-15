@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<main class="top-none">
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content">
+            <!-- mt-16 is now relative to the section start, which is corrected by margin-top on the section itself -->
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mt-16 drop-shadow-lg">
+                Green Dreams, Real Change
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl font-medium text-gray-200 drop-shadow-md">
+                — Powered by Jamuna Foundation.
+            </p>
+            <div class="mt-10 flex justify-center space-x-4">
+                <a href="#mission"
+                    class="bg-green-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-green-700 transition duration-300 ease-in-out shadow-lg text-lg transform hover:scale-[1.05]">
+                    Learn More
+                </a>
+                <a href="/donation/"
+                    class="bg-yellow-500 text-white font-semibold px-8 py-3 rounded-xl hover:bg-yellow-600 transition duration-300 ease-in-out shadow-lg text-lg transform hover:scale-[1.05]">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement Callout -->
+    <section class="py-16 md:py-24 bg-white" id="mission">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-gray-800 text-white rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-12">
+                <div class="lg:w-2/3">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+                        Our Pledge: Planting Hope, Nurturing Life.
+                    </h2>
+                    <p class="text-lg md:text-xl font-light text-gray-300">
+                        The Jamuna Foundation is dedicated to mitigating climate change through large-scale
+                        reforestation efforts and sustainable community development projects. We believe that a greener
+                        planet starts with local action and global collaboration.
+                    </p>
+                </div>
+                <div class="lg:w-1/3 w-full flex justify-center lg:justify-end">
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <!-- Corrected color usage for Lucide icons. 'fill-current' uses the text color -->
+                            <i data-lucide="leaf" class="w-8 h-8 text-green-600 fill-current"></i>
+                            <span class="text-xl font-semibold">1 Million Trees Planted</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="users" class="w-8 h-8 text-green-600"></i>
+                            <span class="text-xl font-semibold">12 Community Projects</span>
+                        </div>
+                        <a href="#campaigns"
+                            class="mt-4 bg-green-600 text-white text-center font-bold px-6 py-3 rounded-xl hover:bg-green-700 transition duration-300 ease-in-out shadow-lg transform hover:scale-[1.02]">
+                            Read Our Full Story
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Campaigns Section -->
+    <section class="py-16 md:py-24 bg-gray-50" id="campaigns">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 text-center mb-12">
+                Active Campaigns
+            </h2>
+
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Campaign Card 1: Reforestation (Standardized Colors) -->
+                <div
+                    class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <img src="https://i.im.ge/2025/10/14/ngIGC0.ChatGPT-Image-Oct-14-2025-09-32-23-PM.png"
+                        alt="Reforestation project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">The Amazon Restoration</h3>
+                        <p class="text-gray-600 mb-4">
+                            Help us reforest critical areas of the Amazon rainforest. Every dollar plants one native
+                            tree and supports local indigenous communities.
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                            <!-- Standardized to bg-green-600 -->
+                            <div class="bg-green-600 h-2.5 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between text-sm font-medium text-gray-600 mb-4">
+                            <span>Goal: $100,000</span>
+                            <!-- Standardized to text-green-600 -->
+                            <span class="text-green-600 font-bold">75% Raised</span>
+                        </div>
+                        <!-- Standardized to bg-green-600 and hover:bg-green-700 -->
+                        <a href="/donation/"
+                            class="block w-full text-center bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition duration-300">
+                            Contribute Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Campaign Card: City Cleaning Campaign (Blue Theme) -->
+                <div
+                    class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <img src="https://i.im.ge/2025/10/14/ngLs6K.ChatGPT-Image-Oct-14-2025-09-43-27-PM.png"
+                        alt="City cleaning campaign" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Clean City, Blue Skies</h3>
+                        <p class="text-gray-600 mb-4">
+                            Leading a city-wide cleaning mission to make streets spotless, improve hygiene, and bring
+                            back the sparkle to our surroundings.
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between text-sm font-medium text-gray-600 mb-4">
+                            <span>Goal: ₹50,000</span>
+                            <span class="text-blue-600 font-bold">75% Raised</span>
+                        </div>
+                        <a href="/donation/"
+                            class="block w-full text-center bg-blue-500 text-white font-semibold py-3 rounded-xl hover:bg-blue-600 transition duration-300">
+                            Join the Campaign
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Campaign Card: Blood Donation Drive -->
+                <div
+                    class="bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <img src="https://i.im.ge/2025/10/14/ngLW8a.ChatGPT-Image-Oct-14-2025-09-50-59-PM.png"
+                        alt="Blood donation campaign" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Life-Saving Blood Donation</h3>
+                        <p class="text-gray-600 mb-4">
+                            Supporting blood donation camps to ensure timely availability of blood for those in need.
+                            Every drop counts in saving lives.
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                            <div class="bg-red-600 h-2.5 rounded-full" style="width: 80%"></div>
+                        </div>
+                        <div class="flex justify-between text-sm font-medium text-gray-600 mb-4">
+                            <span>Goal: ₹50,000</span>
+                            <span class="text-red-600 font-bold">80% Raised</span>
+                        </div>
+                        <a href="/donation/"
+                            class="block w-full text-center bg-red-600 text-white font-semibold py-3 rounded-xl hover:bg-red-700 transition duration-300">
+                            Donate Blood
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="text-center mt-12 md:col-span-2 lg:col-span-3">
+                <!-- Standardized hover color to green-600 -->
+                <a href="#gallery"
+                    class="text-lg font-semibold text-gray-800 hover:text-green-600 border-b-2 border-gray-400 hover:border-green-600 pb-1 transition duration-150 ease-in-out">
+                    View All Projects <i data-lucide="arrow-right" class="w-5 h-5 inline ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section Placeholder -->
+    <section class="py-16 bg-white" id="gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+                Impact Gallery
+            </h2>
+            <p class="text-xl text-gray-600 mb-12">
+                See the difference your generosity makes in the world.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 rounded-xl">
+                <!-- Image placeholders using themed colors -->
+                <img src="https://i.im.ge/2025/10/14/ngIGC0.ChatGPT-Image-Oct-14-2025-09-32-23-PM.png"
+                    alt="Trees Planted"
+                    class="w-full h-48 object-cover rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.05] transition duration-300">
+                <img src="https://i.im.ge/2025/10/14/ngLs6K.ChatGPT-Image-Oct-14-2025-09-43-27-PM.png"
+                    alt="Volunteers Working"
+                    class="w-full h-48 object-cover rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.05] transition duration-300">
+                <img src="https://i.im.ge/2025/10/14/ngLW8a.ChatGPT-Image-Oct-14-2025-09-50-59-PM.png" alt="Clean River"
+                    class="w-full h-48 object-cover rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.05] transition duration-300">
+                <img src="https://i.im.ge/2025/10/14/ngLvfK.ChatGPT-Image-Oct-14-2025-09-57-50-PM.png"
+                    alt="Community Gardens"
+                    class="w-full h-48 object-cover rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.05] transition duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Column 1: Logo and Mission -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="https://i.im.ge/2025/10/11/nxIcfm.ChatGPT-Image-Oct-11-2025-07-20-41-PM-removebg-preview.png"
+                            alt="Jamuna Foundation Logo" class="h-10 w-10 rounded-full">
+                        <span class="text-xl font-bold">Jamuna Foundation</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Committed to a sustainable and equitable planet for all.
+                    </p>
+                </div>
+                <!-- Column 2: Quick Links (Standardized color) -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-green-600">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#mission" class="text-gray-400 hover:text-white transition duration-150">Our
+                                Mission</a></li>
+                        <li><a href="#campaigns"
+                                class="text-gray-400 hover:text-white transition duration-150">Campaigns</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition duration-150">Media
+                                Gallery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Get Involved (Standardized color) -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-green-600">Get Involved</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Volunteer</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Corporate
+                                Giving</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 4: Social Media & Contact (Standardized color) -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-green-600">Connect</h4>
+                    <div class="flex space-x-4 text-gray-400">
+                        <!-- Lucide icons are now available for these social media placeholders -->
+                        <a href="https://www.facebook.com/jamunafoundationngo" class="hover:text-white"><i
+                                data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" class="hover:text-white"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" class="hover:text-white"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                    </div>
+                    <p class="text-sm mt-4 text-gray-400">
+                        Email:
+                        jamunafoundation@gmail.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
+                &copy; <span x-text="new Date().getFullYear()"></span> Jamuna Foundation. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</main>
+{% endblock %}
